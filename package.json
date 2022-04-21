@@ -1,8 +1,8 @@
 {
-  "name": "ayaq-product-page",
+  "name": "headless-ayaq",
   "version": "1.0.0",
   "private": true,
-  "description": "ayaq-product-page",
+  "description": "headless-ayaq",
   "author": "romchambe",
   "keywords": [
     "gatsby"
@@ -16,12 +16,20 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@chakra-ui/gatsby-plugin": "^2.0.4",
+    "@chakra-ui/react": "^1.8.8",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@fontsource/readex-pro": "^4.5.6",
+    "dotenv": "^16.0.0",
+    "framer-motion": "^6.3.0",
     "gatsby": "^4.12.1",
     "gatsby-plugin-image": "^2.12.1",
     "gatsby-plugin-react-helmet": "^5.12.1",
     "gatsby-plugin-sharp": "^4.12.1",
     "gatsby-plugin-sitemap": "^5.12.1",
     "gatsby-source-filesystem": "^4.12.1",
+    "gatsby-source-graphql": "^4.12.1",
     "gatsby-source-shopify": "^7.1.1",
     "gatsby-transformer-sharp": "^4.12.1",
     "react": "^17.0.1",
