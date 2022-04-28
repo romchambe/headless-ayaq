@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, HStack, Image } from "@chakra-ui/react"
+import { Box, Flex, Grid, Stack, Image } from "@chakra-ui/react"
 import * as React from "react"
 
 const ProductTemplate = ({ pageContext }: {pageContext: any}) => {
@@ -6,9 +6,19 @@ const ProductTemplate = ({ pageContext }: {pageContext: any}) => {
   const { title, description, images } = product
 
   return (
-    <HStack gap={8} alignItems="flex-start">
-      <Grid templateColumns='repeat(2, 1fr)' gap={4}>
-        {images.edges.map(({ node }: any) => <Image src={node.src} key={node.id} />)}
+    <Stack 
+      gap={8}
+      mt={8}
+      alignItems="flex-start"
+      direction={{ base: "column", md:"row" }}
+    >
+      <Grid templateColumns={{base: '1fr', md: 'repeat(2, 1fr)'}} gap={4}>
+        {images.edges.map(({ node }: any) => (
+          <Image 
+            src={node.src} 
+            key={node.id} 
+          />
+        ))}
       </Grid>
       <Flex direction="column" maxW={{ base: "100%", md: "30%"}}>
         <Box fontSize="xl" fontWeight="700">
@@ -18,7 +28,7 @@ const ProductTemplate = ({ pageContext }: {pageContext: any}) => {
           {description.split('####')[0]}
         </Box>
       </Flex>
-    </HStack>
+    </Stack>
   )
 }
 
