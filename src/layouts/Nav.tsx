@@ -22,12 +22,13 @@ const Nav = () => {
           Collections
         </div>
       </Link>
-      
-      <StaticImage 
-        src="../images/logo.png"
-        alt="logo Ayaq"
-        height={20}
-      />
+      <Link to="/">
+        <StaticImage 
+          src="../images/logo.png"
+          alt="logo Ayaq"
+          height={20}
+        />
+      </Link>
       <Flex>
         <ChakraLink href="https://ayaq.com/pages/stores" mr={6}>
           <Icon as={FiMapPin} h={5} w={5} />
