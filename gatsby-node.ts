@@ -1,33 +1,11 @@
-const path = require(`path`)
+import path from "path"
+import { allProducts } from "./src/queries/allProducts"
 
 export const createPages = async ({ graphql, actions }: any) => {
   const { createPage } = actions
   
   // Query for all products in Shopify
-  const { data } = await graphql(`
-    query {
-      shopify {
-        products(first: 100) {
-          edges {
-            node {
-              id
-              title
-              description
-              handle
-              images(first: 10) {
-                edges {
-                  node {
-                    id
-                    src
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  const { data } = await graphql(allProducts)
 
   // Iterate over all products and create a new page using a template
   // The product "handle" is generated automatically by Shopify
