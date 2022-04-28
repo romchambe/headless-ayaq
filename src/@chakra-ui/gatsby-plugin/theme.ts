@@ -12,6 +12,9 @@ const theme: DeepPartial<Theme>  = {
   fonts: {
     heading: 'Readex Pro, sans-serif',
     body: 'Readex Pro, sans-serif'
+  },
+  colors: {
+    black: "273945"
   }
 }
 
